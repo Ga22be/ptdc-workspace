@@ -1,4 +1,5 @@
 package lab2;
+
 import se.lth.cs.ptdc.square.Square;
 import se.lth.cs.window.SimpleWindow;
 
