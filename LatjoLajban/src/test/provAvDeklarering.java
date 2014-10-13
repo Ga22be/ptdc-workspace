@@ -16,6 +16,5 @@ public class provAvDeklarering {
 
 		System.out.print("p1: " + p1.getX() + " " + p1.getY());
 		System.out.println(", p2: " + p2.getX() + " " + p2.getY());
-
 	}
 }
