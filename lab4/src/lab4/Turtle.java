@@ -8,7 +8,7 @@ public class Turtle {
 	private int y = 0;
 	private int curAngle = 90;
 	private SimpleWindow w = null;
-	private boolean pen = true;
+	private boolean pen = false;
 
 	/**
 	 * Skapar en sköldpadda som ritar i ritfönstret w. Från början befinner sig
