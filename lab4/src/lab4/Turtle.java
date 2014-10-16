@@ -3,7 +3,6 @@ package lab4;
 import se.lth.cs.window.SimpleWindow;
 
 public class Turtle {
-	// ... lägg till attribut
 	private double x = 0;
 	private double y = 0;
 	private int curAngle = 90;
@@ -36,8 +35,8 @@ public class Turtle {
 	/** Går rakt framåt n pixlar i den riktning som huvudet pekar */
 	public void forward(int n) {
 		w.moveTo((int) Math.round(x), (int) Math.round(y));
-		x = Math.round((x + (n * Math.cos(Math.toRadians(curAngle)))));
-		y = Math.round((y + (-n * Math.sin(Math.toRadians(curAngle)))));
+		x = x + (n * Math.cos(Math.toRadians(curAngle)));
+		y = y + (-n * Math.sin(Math.toRadians(curAngle)));
 		w.lineTo((int) Math.round(x), (int) Math.round(y));
 		if (pen) {
 			w.lineTo((int) Math.round(x), (int) Math.round(y));
