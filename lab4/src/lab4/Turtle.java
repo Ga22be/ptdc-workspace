@@ -4,8 +4,8 @@ import se.lth.cs.window.SimpleWindow;
 
 public class Turtle {
 	// ... lägg till attribut
-	private int x = 0;
-	private int y = 0;
+	private double x = 0;
+	private double y = 0;
 	private int curAngle = 90;
 	private SimpleWindow w = null;
 	private boolean pen = false;
@@ -35,14 +35,14 @@ public class Turtle {
 
 	/** Går rakt framåt n pixlar i den riktning som huvudet pekar */
 	public void forward(int n) {
-		w.moveTo(x, y);
-		x = (int) Math.round((x + (n * Math.cos(Math.toRadians(curAngle)))));
-		y = (int) Math.round((y + (-n * Math.sin(Math.toRadians(curAngle)))));
-		w.lineTo(x, y);
+		w.moveTo((int) Math.round(x), (int) Math.round(y));
+		x = Math.round((x + (n * Math.cos(Math.toRadians(curAngle)))));
+		y = Math.round((y + (-n * Math.sin(Math.toRadians(curAngle)))));
+		w.lineTo((int) Math.round(x), (int) Math.round(y));
 		if (pen) {
-			w.lineTo(x, y);
+			w.lineTo((int) Math.round(x), (int) Math.round(y));
 		} else {
-			w.moveTo(x, y);
+			w.moveTo((int) Math.round(x), (int) Math.round(y));
 		}
 	}
 
@@ -64,7 +64,7 @@ public class Turtle {
 	public void jumpTo(int newX, int newY) {
 		x = newX;
 		y = newY;
-		w.moveTo(x, y);
+		w.moveTo((int) Math.round(x), (int) Math.round(y));
 	}
 
 	/** Återställer huvudriktningen till den ursprungliga */
@@ -74,12 +74,12 @@ public class Turtle {
 
 	/** Tar reda på x-koordinaten för sköldpaddans aktuella position */
 	public int getX() {
-		return x;
+		return (int) Math.round(x);
 	}
 
 	/** Tar reda på y-koordinaten för sköldpaddans aktuella position */
 	public int getY() {
-		return y;
+		return (int) Math.round(y);
 	}
 
 	/** Tar reda på sköldpaddans riktning, i grader från positiv x-led */
