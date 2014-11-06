@@ -3,10 +3,10 @@ package lab4;
 import se.lth.cs.window.SimpleWindow;
 
 public class Turtle {
-	private double x = 0;
-	private double y = 0;
+	private double x;
+	private double y;
 	private int curAngle = 90;
-	private SimpleWindow w = null;
+	protected SimpleWindow w;
 	private boolean pen = false;
 
 	/**
@@ -50,9 +50,7 @@ public class Turtle {
 		if((curAngle+beta)<=360){
 			curAngle = curAngle + beta;
 		} else{
-			int k = (curAngle+beta)/360;
-			curAngle = 0;
-			curAngle = (curAngle + beta) - (k*360);
+			curAngle = (curAngle+beta)%360;
 		}
 	}
 
