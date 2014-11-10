@@ -13,12 +13,12 @@ public class MazeRunner {
 		turtle.penDown();
 		
 		for(int j = 0; j < 5; j++){
-			maze[j].draw(w);
+			w.clear();
 			w.moveTo(w.getWidth()/2, 30);
 			w.writeText("Nivå: " + (j+1));
-			w.waitForMouseClick();
+			maze[j].draw(w);
 			turtle.walk(maze[j]);
-			w.clear();
+			w.waitForMouseClick();
 		}
 		System.out.println("Klar");
 	}
