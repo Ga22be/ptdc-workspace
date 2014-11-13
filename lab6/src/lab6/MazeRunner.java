@@ -21,5 +21,6 @@ public class MazeRunner {
 			w.waitForMouseClick();
 		}
 		System.out.println("Klar");
+		w.close();
 	}
 }
