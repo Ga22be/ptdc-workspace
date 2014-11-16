@@ -10,7 +10,7 @@ public class PatiensV2 {
 		double wins = 0;
 		boolean gickUt;
 		int testValue = 1;
-		int times = 100000;
+		int times = 10000000;
 		
 		for(int i = 0; i < times; i++) {
 			deck = new CardDeck();
