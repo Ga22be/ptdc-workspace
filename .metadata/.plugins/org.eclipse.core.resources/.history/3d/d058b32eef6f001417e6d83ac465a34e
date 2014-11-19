@@ -1,0 +1,28 @@
+package ovn7;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Insertion {
+	public static void main(String[] args){
+		ArrayList<Integer> val = new ArrayList<Integer>();
+		Random rnd = new Random();
+		Integer newVal;
+		int index = 0;
+		
+		for(int load = 0; load < 10; load++){
+			newVal = new Integer(1 + rnd.nextInt(25));
+			val.add(newVal);
+			System.out.println(val.get(load).intValue());
+		}
+		/*
+		for(int current = 1; current < val.size(); current++){
+			for(int prev = (current-1); prev >= 0; prev--){
+				if(val.get(current).intValue() < val.get(prev).intValue()){
+					val.
+				}
+			}
+		}
+		*/
+	}
+}
