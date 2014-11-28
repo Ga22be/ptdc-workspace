@@ -1,0 +1,10 @@
+package ovn8;
+
+public class PiorityQueue {
+	ArrayList<Person> queue;
+	public PiorityQueue(){
+		queue = new ArrayList<Person>;
+	}
+	
+	public
+}

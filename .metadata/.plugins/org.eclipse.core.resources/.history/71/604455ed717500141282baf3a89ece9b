@@ -1,0 +1,11 @@
+package ovn8;
+
+import java.util.ArrayList;
+
+public class WordList {
+	ArrayList<String> wordList;
+	
+	public WordList(){
+		wordList = new ArrayList<String>();
+	}
+}

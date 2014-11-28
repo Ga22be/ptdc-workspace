@@ -1,0 +1,31 @@
+package ovn8;
+
+public class WordElement {
+	private String word;
+	private int times;
+
+	public WordElement(String word, int times) {
+		this.word = word;
+		this.times = times;
+	}
+	
+	public String getWord(){
+		return word;
+	}
+	
+	public void setWord(String word){
+		this.word = word;
+	}
+	
+	public int getTimes(){
+		return times;
+	}
+	
+	public void setTimes(int times){
+		this.times = times;
+	}
+	
+	public boolean equals(String word){
+		return this.word.equals(word);		
+	}
+}

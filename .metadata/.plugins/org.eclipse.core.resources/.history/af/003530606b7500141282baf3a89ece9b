@@ -1,0 +1,10 @@
+package ovn8;
+
+public class Queue {
+	ArrayList<Person> queue;
+	public Queue(){
+		queue = new ArrayList<Person>;
+	}
+	
+	public
+}

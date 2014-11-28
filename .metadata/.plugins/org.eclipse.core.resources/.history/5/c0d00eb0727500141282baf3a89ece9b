@@ -1,0 +1,33 @@
+package ovn8;
+
+import java.util.ArrayList;
+
+public class WordList {
+	ArrayList<WordElement> wordList;
+
+	public WordList() {
+		wordList = new ArrayList<WordElement>();
+	}
+
+	public void insert(String w) {
+		wordList.add();
+	}
+
+	public void remove(String w) {
+		int i = 0;
+		while (i < wordList.size()) {
+			if (wordList.get(i).equals(w)) {
+				wordList.remove(i);
+			}
+			i++;
+		}
+	}
+
+	public void contains(String w) {
+		for (int i = 0; i < wordList.size(); i++) {
+			if (wordList.get(i).equals(w)) {
+				wordList.remove(i);
+			}
+		}
+	}
+}
