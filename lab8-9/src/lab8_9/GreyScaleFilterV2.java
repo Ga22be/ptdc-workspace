@@ -4,7 +4,7 @@ import se.lth.cs.ptdc.images.ImageFilter;
 
 /** IdentityFilter beskriver en identitetstransformation */
 public class GreyScaleFilterV2 extends ImageFilter {
-	Color[] greyScale = new Color[256];
+	private Color[] greyScale = new Color[256];
 	public GreyScaleFilterV2(String name) {
 		super(name);
 		for(int i = 0; i < greyScale.length; i++){
