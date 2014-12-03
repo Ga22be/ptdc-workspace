@@ -24,27 +24,31 @@ public class ContrastFilter extends ImageFilter {
 		double cutOff = paramValue;
 		int lowCut = 0;
 		int highCut = 255;
-		int histSum = 0;
-		int newIntensity; 
-		
+		int lowSum = 0;
+		int highSum = 0;
+		int newIntensity;
+
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
 				histogram[intensity[i][j]]++;
 			}
 		}
-		
-		while(cutOff*height*width > histSum){
-			histSum += histogram[lowCut++];
-		}
-		histSum = 0;
-		while(cutOff*(height*width) > histSum){
-			histSum += histogram[highCut--];
+
+		while (cutOff * height * width > lowSum
+				|| cutOff * (height * width) > highSum) {
+			if (cutOff * height * width > lowSum) {
+				lowSum += histogram[lowCut++];
+			}
+			if (cutOff * (height * width) > highSum) {
+				highSum += histogram[highCut--];
+			}
 		}
 
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
-				if(intensity[i][j] >= lowCut && intensity[i][j] <= highCut){
-					newIntensity = 255 * (intensity[i][j] - lowCut) / (highCut - lowCut);					
+				if (intensity[i][j] >= lowCut && intensity[i][j] <= highCut) {
+					newIntensity = 255 * (intensity[i][j] - lowCut)
+							/ (highCut - lowCut);
 				} else if (intensity[i][j] < lowCut) {
 					newIntensity = 0;
 				} else {

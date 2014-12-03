@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class Test {
+	private int nbrQuestions; // antalet frågor
+	private ArrayList<Student> students; // studenterna som deltar
+	private int[] statistics = new int[6];
+	
+	/**
+	 * Skriver ut statistik över hur många studenter som har svarat rätt på 0,
+	 * 1, 2, ... frågor (se exemplet ovan)
+	 */
+	public void printStatistics() {
+		int correct = -1;
+		for(int i = 0; i < students.size(); i++){
+			Student student = students.get(i);
+			for(int j = 0; j < student.getNbrAnswers; j++){
+				Answer answer = student.getAnswer(j);
+				if(answer.isCorrect()){
+					correct++;
+				}
+			}
+			if(correct > -1){
+				statistics[correct]++;
+			}
+			
+		}
+	}
+}

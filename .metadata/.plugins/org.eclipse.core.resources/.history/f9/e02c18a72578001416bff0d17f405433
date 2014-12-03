@@ -1,0 +1,16 @@
+package test;
+
+import java.awt.Point;
+import java.util.ArrayList;
+
+public class provAvArrayList {
+
+	public static void main(String[] args) {
+		ArrayList<Point> points = new ArrayList<Point>();
+		
+		Point p1 = new Point(10, 20);
+		points.add(p1);
+		Point p2 = new Point(10, 20);
+	}
+
+}

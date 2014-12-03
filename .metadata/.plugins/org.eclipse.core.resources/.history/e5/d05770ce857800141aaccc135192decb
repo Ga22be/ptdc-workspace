@@ -1,0 +1,12 @@
+public class Test {
+	private int nbrQuestions; // antalet frågor
+	private ArrayList<Student> students; // studenterna som deltar
+
+	/**
+	 * Skriver ut statistik över hur många studenter som har svarat rätt på 0,
+	 * 1, 2, ... frågor (se exemplet ovan)
+	 */
+	public void printStatistics() {
+
+	}
+}

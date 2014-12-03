@@ -1,0 +1,11 @@
+public class DayBookings {
+	private int[] booked = new int[24];
+
+	/**
+	 * Skapar ett objekt som håller reda på vilka tider som salen room är bokade
+	 * under dagen day. Från början är inga tider bokade
+	 */
+	public DayBookings(String room, String day) {
+
+	}
+}

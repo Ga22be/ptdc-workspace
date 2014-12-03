@@ -4,9 +4,6 @@ import se.lth.cs.ptdc.images.ImageFilter;
 
 /** IdentityFilter beskriver en identitetstransformation */
 public class GausFilter extends ImageFilter {
-	private short[][] red;
-	private short[][] green;
-	private short[][] blue;
 	public GausFilter(String name) {
 		super(name);
 	}
@@ -15,9 +12,10 @@ public class GausFilter extends ImageFilter {
 		int height = inPixels.length;
 		int width = inPixels[0].length;
 		Color[][] outPixels = new Color[height][width];
-		red = new short[height][width];
-		green = new short[height][width];
-		blue = new short[height][width];
+		short[][] red = new short[height][width];
+		short[][] green = new short[height][width];
+		short[][] blue = new short[height][width];		
+		
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
 				Color pixel = inPixels[i][j];			

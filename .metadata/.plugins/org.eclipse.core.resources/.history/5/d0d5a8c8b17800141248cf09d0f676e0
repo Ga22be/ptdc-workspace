@@ -1,0 +1,18 @@
+public class StudentRegister {
+	private int nbrStudents; // antalet studenter
+	private Student[] students; // vektor med nbrStudents studenter
+	// konstruktorer och metoder där vektorn students bildas
+
+	/** Beräknar medelantalet poäng som studenterna klarade under året year */
+	public double getAveragePoints(int year) {
+
+	}
+
+	/**
+	 * Räknar hur många studenter som under året year klarade 0-9, 10-19, ...,
+	 * 50-59, >=60 poäng, skriver ut antalen med ett tal per rad
+	 */
+	public void printStatistics(int year) {
+
+	}
+}

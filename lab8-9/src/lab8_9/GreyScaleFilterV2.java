@@ -15,7 +15,7 @@ public class GreyScaleFilterV2 extends ImageFilter {
 	public Color[][] apply(Color[][] inPixels, double paramValue) {
 		int height = inPixels.length;
 		int width = inPixels[0].length;
-		short[][] intensity = super.computeIntensity(inPixels);
+		short[][] intensity = computeIntensity(inPixels);
 		Color[][] outPixels = new Color[height][width];
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {

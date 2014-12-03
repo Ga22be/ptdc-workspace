@@ -1,0 +1,34 @@
+public class Student {
+	/** Skapar en student med namnet name */
+	Student(String name) {
+
+	}
+
+	/** Tar reda på studentens namn */
+	String getName() {
+
+	}
+
+	/**
+	 * Lägger in svaret a i listan med studentens svar, under förutsättning att
+	 * frågan inte redan är korrekt besvarad. Om svaret lagts in i listan
+	 * returneras true, annars false
+	 */
+	boolean submitAnswer(Answer a) {
+
+	}
+
+	/**
+	 * Tar reda på antalet svar som studenten har lämnat in (på alla frågor,
+	 * både felaktiga och korrekta svar räknas)
+	 */
+	int getNbrAnswers() {
+
+	}
+
+	/** Returnerar svar nummer n. Det måste gälla att 0 <= n < getNbrAnswers */
+	Answer getAnswer(int n) {
+
+	}
+
+}

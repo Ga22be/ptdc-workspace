@@ -13,9 +13,12 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
+		<item value="input" key="selection"/>
 		<list key="findhistory">
+			<item value="filename"/>
 		</list>
 		<list key="replacehistory">
+			<item value="input"/>
 		</list>
 	</section>
 </section>

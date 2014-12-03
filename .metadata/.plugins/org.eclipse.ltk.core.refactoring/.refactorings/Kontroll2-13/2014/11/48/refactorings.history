@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;uppg1&apos; to &apos;DayBookings&apos;&#x0D;&#x0A;- Original project: &apos;Kontroll2-13&apos;&#x0D;&#x0A;- Original element: &apos;uppg1&apos;&#x0D;&#x0A;- Renamed element: &apos;DayBookings&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;uppg1&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{uppg1.java[uppg1" matchStrategy="1" name="DayBookings" qualified="false" references="true" similarDeclarations="false" stamp="1417302544603" textual="false" version="1.0"/>
+</session>

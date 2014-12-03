@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+
+public class Student {
+	private String name;
+	private ArrayList<Answer> answers;
+	
+	/** Skapar en student med namnet name */
+	public Student(String name) {
+		this.name = name;
+		answers = new ArrayList<Answer>();
+	}
+
+	/** Tar reda på studentens namn */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * Lägger in svaret a i listan med studentens svar, under förutsättning att
+	 * frågan inte redan är korrekt besvarad. Om svaret lagts in i listan
+	 * returneras true, annars false
+	 */
+	public boolean submitAnswer(Answer a) {
+		if(a.isCorrect()){
+			if(answers.contains(a)){
+				return false;
+			} else {
+				answers.add(a);
+				return true;
+			}
+		} else {
+			answers.add(a);
+			return true;
+		}
+		
+	}
+
+	/**
+	 * Tar reda på antalet svar som studenten har lämnat in (på alla frågor,
+	 * både felaktiga och korrekta svar räknas)
+	 */
+	public int getNbrAnswers() {
+
+	}
+
+	/** Returnerar svar nummer n. Det måste gälla att 0 <= n < getNbrAnswers */
+	Answer getAnswer(int n) {
+
+	}
+
+}
