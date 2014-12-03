@@ -35,7 +35,7 @@ public class ContrastFilter extends ImageFilter {
 		}
 
 		while (cutOff * height * width > lowSum
-				|| cutOff * (height * width) > highSum) {
+				|| cutOff * height * width > highSum) {
 			if (cutOff * height * width > lowSum) {
 				lowSum += histogram[lowCut++];
 			}

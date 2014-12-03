@@ -15,8 +15,6 @@ public class SobelFilter extends ImageFilter {
 		int height = inPixels.length;
 		int width = inPixels[0].length;
 		short[][] intensity = computeIntensity(inPixels);	
-//		short[][] sx = new short[height][width];
-//		short[][] sy = new short[height][width];
 		Color[][] outPixels = new Color[height][width];
 		
 		double threshold = paramValue;
