@@ -26,14 +26,14 @@ public class GausFilter extends ImageFilter {
 		}
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
-				if(i > 1 && i < height-1 && j > 1 && j < width-1){
+				if(i > 0 && i < height-1 && j > 0 && j < width-1){
 					int redVal = convolve(red, i, j, GAUSS_KERNEL, 8);
 					int greenVal = convolve(green, i, j, GAUSS_KERNEL, 8);
 					int blueVal = convolve(blue, i, j, GAUSS_KERNEL, 8);
 					outPixels[i][j] = new Color(redVal, greenVal, blueVal);
 				} else {
-					outPixels[i][j] = inPixels[i][j];
-//					outPixels[i][j] = Color.BLACK;
+//					outPixels[i][j] = inPixels[i][j];
+					outPixels[i][j] = Color.BLACK;
 				}
 			}
 		}		
