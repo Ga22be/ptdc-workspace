@@ -17,5 +17,18 @@ public class Square extends Shape{
 		w.lineTo(x, y+side);
 		w.lineTo(x, y);
 	}
+	
+	public int getX(){
+		return x;
+	}
+	
+	public int getY(){
+		return y;
+	}
+	
+	public int getSide(){
+		return side;
+	}
 
 }
+

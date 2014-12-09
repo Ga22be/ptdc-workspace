@@ -18,4 +18,16 @@ public class Triangle extends Shape{
 		w.lineTo(xTop, yTop);
 		w.lineTo(x, y);
 	}
+	
+	public int getX(){
+		return x;
+	}
+	
+	public int getY(){
+		return y;
+	}
+	
+	public int getSide(){
+		return side;
+	}
 }
