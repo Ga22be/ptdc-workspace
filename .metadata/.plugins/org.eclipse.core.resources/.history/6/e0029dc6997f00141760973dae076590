@@ -1,0 +1,20 @@
+package lab10;
+
+import se.lth.cs.ptdc.shapes.Shape;
+import se.lth.cs.window.SimpleWindow;
+
+public class Triangle extends Shape{
+	private int side;
+	public Triangle(int x, int y, int side){
+		super(x, y);
+		this.side = side;
+	}
+	
+	public void draw(SimpleWindow w){
+		w.moveTo(x, y);
+		w.lineTo(x+side, y);
+		int xNew = (int) (x - side*Math.cos(120)); 
+		int yNew = (int) (y - side*Math.sin(120));
+		w.lineTo(xNew, yNew);
+	}
+}

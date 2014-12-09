@@ -1,0 +1,24 @@
+package lab10;
+
+import se.lth.cs.ptdc.shapes.Shape;
+import se.lth.cs.window.SimpleWindow;
+
+public class Triangle extends Shape{
+	private int side;
+	public Triangle(int x, int y, int side){
+		super(x, y);
+		this.side = side;
+	}
+	
+	public void draw(SimpleWindow w){
+		w.moveTo(x, y);
+		w.lineTo(x+side, y);
+		System.out.println((int) Math.round(side*Math.cos(120)));
+		System.out.println((int) Math.round(side*Math.sin(120)));
+		System.out.println(Math.cos(2*Math.PI/3));
+		System.out.println(Math.sin(2*Math.PI/3));
+		int xNew = w.getX() + (int) Math.round(side*Math.cos(2*Math.PI/3)); 
+		int yNew = w.getY() - (int) Math.round(side*Math.sin(2*Math.PI/3));
+		w.lineTo(xNew, yNew);
+	}
+}
