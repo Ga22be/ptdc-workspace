@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+
+public class SelectionCount {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Ring ring = new Ring();
+		int nbrPersons;
+		int n;
+		
+		/**Läser in spelregler och lägger till personerna i ringen*/
+		System.out.println("Hur många personer i ringen?");
+		nbrPersons = scan.nextInt();
+		System.out.println("Hur lång är räkneamsan?");
+		n = scan.nextInt();
+		for(int i = 0; i < nbrPersons; i++){
+			System.out.println("Namn på person nr " + (i+1));
+			ring.insert(new Person(scan.next()));
+		}
+		
+		ring.reset();
+		while(ring.size() > 1){
+			ring.countTo(n);
+			ring.removeCurrent();
+		}
+		
+		Person p = ring.removeCurrent();
+		System.out.println(p.getName() + "belv utvald");
+	}
+
+}

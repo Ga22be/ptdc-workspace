@@ -1,0 +1,10 @@
+
+public class ReservationManager {
+	private PerformanceList pl;
+	private ReservationList rl;
+	
+	public ReservationManager(PerformanceList pl, ReservationList rl){
+		this.pl = pl;
+		this.rl = rl;
+	}
+}
