@@ -1,0 +1,8 @@
+
+public class TestNormalRandom {
+	public static void main(String[] args){
+		NormalRandom rnd = new NormalRandom();
+		
+		int 
+	}
+}

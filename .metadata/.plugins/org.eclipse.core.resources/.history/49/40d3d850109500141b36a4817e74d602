@@ -1,0 +1,19 @@
+package ovn10;
+
+public class ToString {
+	public static void main(String[] args){
+		int x;
+		
+		System.out.println(x);
+	}
+//	public ToString(){
+//		
+//	}
+//	
+//	public String toString(int number){
+//		if(number == null){
+//			throw new NumberFormatException();
+//		}
+//		return "hi";
+//	}
+}

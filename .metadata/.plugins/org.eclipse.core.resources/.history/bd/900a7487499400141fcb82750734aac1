@@ -1,0 +1,22 @@
+package ovn10;
+
+public class ParseIntV2 {
+	public ParseIntV2() {
+
+	}
+
+	public int parseInt(String text) {
+		if (text == null) {
+			throw new NumberFormatException();
+		}
+		int index = 0;
+		boolean negative = true;
+
+		if (text.charAt(0) == '-' && text.length() > 1) {
+			index = 1;
+		} else {
+			throw new NumberFormatException();
+		}
+
+	}
+}

@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+
+public class BlogPost {
+	private ArrayList<String> tags;
+	private String title;
+	private String text;
+	private String date;
+	
+	public BlogPost(String title, String text, String date){
+		tags = new ArrayList<String>();
+		this.title = title;
+		this.text = text;
+		this.date = date;
+	}
+	
+	
+	
+	
+	
+}

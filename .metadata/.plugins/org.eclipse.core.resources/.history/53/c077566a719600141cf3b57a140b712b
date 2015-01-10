@@ -1,0 +1,20 @@
+
+public class Term {
+	/** Skapar en term med koefficienten coeff och gradtalet degree */
+	public Term(double coeff, int degree){
+		
+	}
+	/** Tar reda på koefficientvärdet */
+	public double getCoeff(){
+		return 1;
+	}
+	/** Adderar x till koefficientvärdet */
+	public void addToCoeff(double x){
+		
+	}
+	/** Tar reda på gradtalet */
+	public int getDegree(){
+		return 1;
+	}
+
+}

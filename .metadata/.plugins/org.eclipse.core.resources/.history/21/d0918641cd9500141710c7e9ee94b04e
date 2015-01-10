@@ -1,0 +1,10 @@
+
+public class TestNormalRandom {
+	public static void main(String[] args){
+		NormalRandom rnd = new NormalRandom();
+		while(true){
+			int i = rnd.nextNormal();			
+			System.out.println(i);
+		}		
+	}
+}

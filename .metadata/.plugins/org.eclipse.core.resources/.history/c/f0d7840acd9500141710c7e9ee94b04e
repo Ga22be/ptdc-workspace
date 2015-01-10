@@ -1,0 +1,9 @@
+
+public class TestNormalRandom {
+	public static void main(String[] args){
+		NormalRandom rnd = new NormalRandom();
+		
+		int i = rnd.nextNormal();
+		System.out.println(i);
+	}
+}

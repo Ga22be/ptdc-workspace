@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+
+public class TestBlogPost {
+	public static void main(String[] args) {
+		String text = "Idag var det en trevlig dag och jag har pluggat matte";
+		BlogPost blogPost = new BlogPost("Mitt test", text , "2015-01-06");
+		blogPost.addTag("matte");
+		blogPost.addTag("plugg");
+		blogPost.addTag("jul");
+		
+		ArrayList<String> words = new ArrayList<String>();
+		words.add("matte");
+		words.add("plugg");
+		words.add("jul");
+
+		if(blogPost.allTagsMatch(words)){
+			String post = blogPost.toString();
+			System.out.println(post);
+		}
+	}
+}

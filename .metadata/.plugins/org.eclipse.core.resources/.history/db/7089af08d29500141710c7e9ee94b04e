@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+
+
+public class BlogPost {
+	private ArrayList<String> tags;
+	private String title;
+	private String text;
+	private String date;
+	
+	public BlogPost(String title, String text, String date){
+		tags = new ArrayList<String>();
+		this.title = title;
+		this.text = text;
+		this.date = date;
+	}
+	
+	public void addTag(String tag){
+		if(!isPresent(tag)){
+			tags.add(tag);
+		}
+	}
+	
+	public boolean allTagsMatch(ArrayList<String> words){
+		for(int i = 0; i < words.size(); i++){
+			if(!isPresent(words.get(i))){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public String toString(){
+		StringBuilder builder = new StringBuilder();
+		builder.append(title);
+		builder.append(" ");
+		builder.append(date + "/n");
+		builder.append(text);
+		return builder.toString();
+	}
+	
+	private boolean isPresent(String tag){
+		for(int i = 0; i < tags.size(); i++){
+			if(tag.equals(tags.get(i))){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	
+	
+	
+}

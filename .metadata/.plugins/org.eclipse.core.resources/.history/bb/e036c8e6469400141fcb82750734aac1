@@ -1,0 +1,11 @@
+package ovn10;
+
+public class Parser {
+	public static void main(String[] args){
+		ParseInt parser = new ParseInt();
+		String s = "12frsgtrdh3";
+		
+		int i = parser.parseInt(s);
+		System.out.println(i);
+	}
+}

@@ -1,0 +1,26 @@
+package ovn10;
+
+public class ToString {
+	public ToString(){
+		
+	}
+	
+	public String toString(Integer number){
+		if(number == null){
+			throw new NumberFormatException();
+		}
+		int sum = 0;
+		boolean neg = false;
+		
+		if(number < 0){
+			number *= -1;
+			neg = true;
+		}
+		
+		while(number/10 > 0){
+			sum = number%10;
+			
+		}
+		return "hi";
+	}
+}

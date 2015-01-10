@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+
+public class Polynom {
+	private ArrayList<Term> polynom;
+
+	public Polynom() {
+		polynom = new ArrayList<Term>();
+	}
+
+	public void addTerm(double coeff, int degree) {
+		if (coeff != 0) {
+			int returnDeg = sameDegree(degree);
+			if (returnDeg >= 0) {
+				polynom.get(returnDeg).addToCoeff(coeff);
+			} else {
+				polynom.add(new Term(coeff, degree));
+				sort();
+			}
+		}
+	}
+
+	public double value(double x) {
+		double sum = 0;
+
+		for (int i = 0; i < polynom.size(); i++) {
+			sum += polynom.get(i).getCoeff()
+					* Math.pow(x, polynom.get(i).getDegree());
+		}
+
+		return sum;
+	}
+	
+	public void differentiate(){
+		for(int i = 0; i < polynom.size(); i++){
+			Term old = polynom.get(i);
+			double newCoeff = old.getCoeff()*old.getDegree();
+			int newDegree = old.getDegree()-1;
+			polynom.set(i, new Term(newCoeff, newDegree));
+		}
+	}
+
+	private int sameDegree(int degree) {
+		for (int i = 0; i < polynom.size(); i++) {
+			if (polynom.get(i).getDegree() == degree) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	private void sort() {
+		// if (polynom.size() > 1) {
+		for (int i = 0; i < polynom.size() - 1; i++) {
+			int minVal = Integer.MAX_VALUE;
+			int index = -1;
+
+			for (int j = i; j < polynom.size(); j++) {
+				if (polynom.get(j).getDegree() < minVal) {
+					minVal = polynom.get(j).getDegree();
+					index = j;
+				}
+			}
+
+			Term temp = polynom.get(index);
+			polynom.remove(index);
+			polynom.add(i, temp);
+		}
+		// }
+	}
+}

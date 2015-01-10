@@ -1,0 +1,11 @@
+package test;
+
+public class VektorSort {
+	public static void main(String[] args){
+		int[] vektor = new int[20];
+	}
+	
+	private void sort(){
+		
+	}
+}

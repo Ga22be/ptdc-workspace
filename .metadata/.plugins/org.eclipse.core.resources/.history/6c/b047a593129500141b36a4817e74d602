@@ -1,0 +1,10 @@
+package ovn10;
+
+public class IntToString {
+	public static void main(String[] args) {
+		ToString tS = new ToString();
+		
+		System.out.println(tS.toString(-125608883));
+		
+	}
+}

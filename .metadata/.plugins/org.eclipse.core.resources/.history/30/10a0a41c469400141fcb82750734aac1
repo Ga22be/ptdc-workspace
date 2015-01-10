@@ -1,0 +1,32 @@
+package ovn10;
+
+public class ParseInt {
+	public ParseInt() {
+
+	}
+
+	public int parseInt(String text) {
+		boolean negative = false;
+		int sum = 0;
+		
+		if ((text.charAt(0) >= 48 && text.charAt(0) <= 57)
+				|| text.charAt(0) == 45) {
+			int start = 0;
+			if(text.charAt(0) == 45){
+				negative = true;
+				start = 1;
+			}
+			int add;
+			for (int i = start; i < text.length(); i++) {
+				try{
+					add = Character.getNumericValue(text.charAt(i));						
+				}
+				catch(Exception e){
+					throw new NumberFormatException();
+				}
+				sum = sum*10;
+			}
+			return 2;
+		} else {throw new NumberFormatException();}
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;neg&apos; in &apos;ovn10.ToString.toString(...)&apos; to &apos;negative&apos;&#x0D;&#x0A;- Original project: &apos;ovn10&apos;&#x0D;&#x0A;- Original element: &apos;ovn10.ToString.toString(int).neg&apos;&#x0D;&#x0A;- Renamed element: &apos;neg&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;neg&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;ovn10{ToString.java[ToString~toString~I@neg!115!134!123!125!Z!0!false" name="negative" references="true" stamp="1420486760526" version="1.0"/>
+</session>

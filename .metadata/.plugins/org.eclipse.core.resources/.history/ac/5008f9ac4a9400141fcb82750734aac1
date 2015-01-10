@@ -1,0 +1,29 @@
+package ovn10;
+
+public class ParseIntV2 {
+	public ParseIntV2() {
+
+	}
+
+	public int parseInt(String text) {
+		if (text == null) {
+			throw new NumberFormatException();
+		}
+		int index = 0;
+		boolean negative = false;
+
+		if (text.charAt(0) == '-' && text.length() > 1) {
+			index = 1;
+			negative = true;
+		} else {
+			throw new NumberFormatException();
+		}
+		
+		for(int i = index; i < text.length(); i++){
+			if(text.charAt(i) >= '0' && text.charAt(i) <= '9'){
+				
+			}
+		}
+
+	}
+}

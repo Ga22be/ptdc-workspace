@@ -1,0 +1,18 @@
+import java.util.Random;
+
+public class NormalRandom {
+	private Random rnd;
+	private boolean first = true;
+
+	public NormalRandom() {
+		rnd = new Random();
+	}
+
+	public int nextNormal() {
+		if (first) {
+			double[] rekt = { 1 - rnd.nextDouble(), 1 - rnd.nextDouble() };
+
+			double r = Math.sqrt(-2 * Math.log(rekt[0]));
+		}
+	}
+}

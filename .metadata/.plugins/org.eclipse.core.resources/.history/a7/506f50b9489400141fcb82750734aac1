@@ -1,0 +1,16 @@
+package ovn10;
+
+public class ParseIntV2 {
+	public ParseIntV2() {
+
+	}
+
+	public int parseInt(String text) {
+		if(text == null){
+			throw new NumberFormatException();
+		}
+		int sign = 1;
+		if(text.charAt(0) == '-' )
+		
+	}
+}

@@ -1,0 +1,31 @@
+package ovn10;
+
+public class ToString {
+	public ToString(){
+		
+	}
+	
+	public String toString(Integer number){
+		if(number == null){
+			throw new NumberFormatException();
+		}
+		boolean neg = false;
+		StringBuilder builder = new StringBuilder();
+		
+		if(number < 0){
+			number *= -1;
+			neg = true;
+		}
+		
+		while(number > 0){
+			builder.insert(0, number%10);
+			number /= 10;
+		}
+		
+		if(neg){
+			builder.insert(0, "-");
+		}
+		
+		return builder.toString();
+	}
+}

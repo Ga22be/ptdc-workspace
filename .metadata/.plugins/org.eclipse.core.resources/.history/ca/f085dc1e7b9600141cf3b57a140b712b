@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+public class Blog {
+	private ArrayList<BlogPost> posts;
+
+	public Blog() {
+		posts = new ArrayList<BlogPost>();
+	}
+
+	public ArrayList<BlogPost> getMatchingPosts(ArrayList<String> words) {
+		if (posts.size() < 1) {
+			return null;
+		}
+		ArrayList<BlogPost> returnPosts = new ArrayList<BlogPost>();
+
+		for (int i = 0; i < posts.size(); i++) {
+			if (!posts.get(i).allTagsMatch(words)) {
+				return null;
+			} else {
+				returnPosts.add(posts.get(i));
+			}
+		}
+		
+		return returnPosts;
+	}
+
+}

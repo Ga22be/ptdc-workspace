@@ -1,0 +1,11 @@
+import java.util.ArrayList;
+
+
+public class BlogPost {
+	private ArrayList<String> tags = new ArrayList<String>();
+	
+	public BlogPost(){
+		
+	}
+	
+}
