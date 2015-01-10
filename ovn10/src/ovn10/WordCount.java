@@ -1,0 +1,21 @@
+package ovn10;
+
+import java.util.Scanner;
+
+public class WordCount {
+	public static void main(String[] args) {
+		String s = "   hej  hopp hus 	husvagn   banan ";
+		int wordCount = 0;
+		boolean newWord = true;
+		
+		for(int i = 0; i < s.length(); i++){
+			if(Character.isWhitespace(s.charAt(i))){
+				newWord = true;
+			} else if(newWord){
+				wordCount++;
+				newWord = false;
+			}
+		}		
+		System.out.println(wordCount);
+	}
+}
